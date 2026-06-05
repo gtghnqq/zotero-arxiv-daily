@@ -98,6 +98,7 @@ class Executor:
             return
         all_papers = []
         for source, retriever in self.retrievers.items():
+            time.sleep(11)  # 新加代码
             logger.info(f"Retrieving {source} papers...")
             papers = retriever.retrieve_papers()
             if len(papers) == 0:
